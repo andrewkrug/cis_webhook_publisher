@@ -1,0 +1,10 @@
+AUTH0_URL: auth-dev.mozilla.auth0.com
+AUDIENCE: https://webhook-publisher.sso.allizom.org
+CIS_DYNAMODB_TABLE: CISStaging-VaultandStreams-IdentityVaultUsers-O35P6M8U9LNW
+CIS_DYNAMODB_ARN: arn:aws:dynamodb:*:*:table/CISStaging-VaultandStreams-IdentityVaultUsers-O35P6M8U9LNW
+DOMAIN_NAME: webhook-publisher.sso.allizom.org
+BASE_PATH: /
+CERTIFICATE_NAME: webhook-publisher.sso.allizom.org
+ZONE_ID: Z1TD6NP912K738
+PARAMETER_STORE_KEY_ARN: arn:aws:kms:us-west-2:656532927350:key/370040c7-1ed4-459c-95ef-566704c3baec
+CLIENT_ID: zCw2x2bvXfazf7GZtW01GvDKS1PPeBz5

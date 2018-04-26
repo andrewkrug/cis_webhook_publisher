@@ -1,0 +1,28 @@
+service: webhook-publisher
+provider:
+  name: aws
+  runtime: python3.6
+functions:
+  api:
+    environment:
+      CIS_DYNAMODB_TABLE: ${file(config.${self:provider.stage}.yml):CIS_DYNAMODB_TABLE}
+    handler: wsgi.handler
+    events:
+      - http: ANY /
+      - http: ANY {proxy+}
+custom:
+  pythonRequirements:
+    dockerizePip: true
+  wsgi:
+    app: api.app
+  customDomain:
+    domainName: ${file(config.${self:provider.stage}.yml):DOMAIN_NAME}
+    stage: ${self:provider.stage}
+    basePath: ''
+    certificateName: ${file(config.${self:provider.stage}.yml):CERTIFICATE_NAME}
+    createRoute53Record: true
+    hostedZoneId: ${file(config.${self:provider.stage}.yml):ZONE_ID}
+plugins:
+  - serverless-python-requirements
+  - serverless-wsgi
+  - serverless-domain-manager

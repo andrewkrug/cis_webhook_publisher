@@ -1,0 +1,4 @@
+node_modules/
+env/
+env3/
+tests/__pycache__/

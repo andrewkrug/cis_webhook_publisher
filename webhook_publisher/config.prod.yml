@@ -1,0 +1,9 @@
+AUTH0_URL: auth.mozilla.auth0.com
+AUDIENCE: https://webhook-publisher.sso.mozilla.com
+CIS_DYNAMODB_TABLE: cis-stream-prod-and-idv-IdentityVaultUsers-LMGGZ2XE8K6F
+CIS_DYNAMODB_ARN: arn:aws:dynamodb:*:*:table/cis-stream-prod-and-idv-IdentityVaultUsers-LMGGZ2XE8K6F
+DOMAIN_NAME: webhook-publisher.sso.mozilla.com
+BASE_PATH: /
+CERTIFICATE_NAME: webhook-publisher.sso.mozilla.com
+ZONE_ID: Z3QSLLEQC9DYUS
+PARAMETER_STORE_KEY_ARN: arn:aws:kms:us-west-2:371522382791:key/be6ecbc6-363b-44e0-9bec-c6503cc5a464 
